@@ -1,0 +1,70 @@
+﻿<Window
+    x:Class="CPR_App.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:fa="http://schemas.fontawesome.io/icons/"
+    xmlns:local="clr-namespace:CPR_App"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="CoachingPresenceResearch App"
+    Width="420"
+    Height="400"
+    mc:Ignorable="d">
+    <Grid Background="BlanchedAlmond">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="_File" Height="20">
+                <MenuItem Header="Select File ..." Click="MenuItem_Click_1" />
+                <MenuItem Header="Close" Click="MenuItem_Click" />
+            </MenuItem>
+        </Menu>
+        <Label HorizontalAlignment="Right">version 1.0</Label>
+
+        <!--<Button Width="30" HorizontalAlignment="Right">help</Button>-->
+        <Button
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Margin="0,0,0,10"
+            Width="100"
+            Height="50"
+            x:Name="selectfilebutton"
+            Click="Button_Click">
+            Select File
+        </Button>
+        <fa:ImageAwesome
+            x:Name="spinner"
+            Grid.Row="2"
+            Icon="Cog"
+            Spin="True"
+            Margin="0,0,0,10"
+            SpinDuration="10"
+            Visibility="Hidden" />
+        <fa:ImageAwesome
+            x:Name="errorIcon"
+            Grid.Row="2"
+            Icon="Exclamation"
+            Margin="20"
+            SpinDuration="10"
+            Visibility="Hidden" Foreground="Red" />
+        <fa:ImageAwesome
+            x:Name="succesIcon"
+            Grid.Row="2"
+            Icon="Check"
+            Margin="20"
+            SpinDuration="10"
+            Visibility="Hidden" Foreground="Green" />
+        <Label
+            x:Name="OutoutLabel"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Foreground="Black"
+            IsEnabled="False" />
+    </Grid>
+</Window>
