@@ -10,7 +10,7 @@ fi
 
 echo "starting compression process…"
 sleep 3
-/usr/local/bin/handbrakecli --preset "Very Fast 720p30" --audio none -i "$1" -o "$1.temp"
+/usr/local/bin/handbrakecli --preset "Very Fast 480p30" --audio none -i "$1" -o "$1.temp"
 
 tempFile="$1.temp"
 if [ ! -f "$tempFile" ]; then
